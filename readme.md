@@ -2,12 +2,17 @@
 
 #### test-inner-jsp  jsp在SpringBoot项目内部内运行
 
--java
--resources
-    -META-INF
-        -resources
-            =jsp
-jsp 即可被加载 方法 `http://127.0.0.1:8080/test-inner-jsp.jsp` 可知
+```
++-- java
++-- resources
+|   +-- application.properties
+|   +-- application-dev.properties
+|   +-- META-INF
+|       +-- resources
+|           +-- jsp文件
+```
+
+打开`http://127.0.0.1:8080/test-inner-jsp.jsp`
 
 #### test-jsp 外部jar包中的jsp文件
 打包jsp放置到SpringBoot项目中使用
