@@ -16,13 +16,6 @@
 //public class Bean {
 //    @org.springframework.context.annotation.Bean
 //    public TomcatServletWebServerFactory staticResourceCustomizer() {
-////        return container -> {
-////            if (container instanceof TomcatServletWebServerFactory) {
-////                ((TomcatServletWebServerFactory) container)
-////                        .addContextCustomizers((TomcatContextCustomizer) context
-////                                -> context.addLifecycleListener(new StaticResourceConfigurer(context)));
-////            }
-////        };
 //        TomcatServletWebServerFactory tomcatServletWebServerFactory = new TomcatServletWebServerFactory();
 //        tomcatServletWebServerFactory.addContextCustomizers((TomcatContextCustomizer) context
 //                -> context.addLifecycleListener(new ResourceConfigurer(context)));

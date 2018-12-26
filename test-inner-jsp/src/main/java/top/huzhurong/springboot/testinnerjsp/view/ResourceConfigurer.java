@@ -1,9 +1,12 @@
 //package top.huzhurong.springboot.testinnerjsp.view;
 //
 //import org.apache.catalina.*;
+//import org.springframework.util.ClassUtils;
 //import org.springframework.util.ResourceUtils;
 //
+//import java.io.File;
 //import java.io.FileNotFoundException;
+//import java.net.MalformedURLException;
 //import java.net.URL;
 //import java.util.concurrent.atomic.AtomicBoolean;
 //
@@ -36,6 +39,49 @@
 //                    e.printStackTrace();
 //                }
 //            }
+//        }
+//
+//
+//        if (event.getType().equals(Lifecycle.CONFIGURE_START_EVENT)) {
+//            URL location = this.getClass().getProtectionDomain().getCodeSource().getLocation();
+//
+//
+//            try {
+//                URL resource = ClassUtils.getDefaultClassLoader().getResource("");
+//                System.out.println("equals:\t" + location.equals(resource));
+//            } catch (Exception e) {
+//                ;
+//            }
+//
+//            if (ResourceUtils.isFileURL(location)) {
+//                // when run as exploded directory
+//                String rootFile = location.getFile();
+//                if (rootFile.endsWith("/BOOT-INF/classes/")) {
+//                    rootFile = rootFile.substring(0, rootFile.length() - "/BOOT-INF/classes/".length() + 1);
+//                }
+//                if (!new File(rootFile, "META-INF" + File.separator + "resources").isDirectory()) {
+//                    return;
+//                }
+//
+//                try {
+//                    location = new File(rootFile).toURI().toURL();
+//                } catch (MalformedURLException e) {
+//                    throw new IllegalStateException("Can not add tomcat resources", e);
+//                }
+//            }
+//
+//            String locationStr = location.toString();
+//            if (locationStr.endsWith("/BOOT-INF/classes!/")) {
+//                // when run as fat jar
+//                locationStr = locationStr.substring(0, locationStr.length() - "/BOOT-INF/classes!/".length() + 1);
+//                try {
+//                    location = new URL(locationStr);
+//                } catch (MalformedURLException e) {
+//                    throw new IllegalStateException("Can not add tomcat resources", e);
+//                }
+//            }
+//            this.context.getResources().createWebResourceSet(WebResourceRoot.ResourceSetType.RESOURCE_JAR, "/", location,
+//                    "/META-INF/resources");
 //        }
 //    }
 //}

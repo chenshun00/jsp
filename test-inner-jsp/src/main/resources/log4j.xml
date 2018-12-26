@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+    <appender name="ConsoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd hh:mm:ss}:%p %t %c - %m%n"/>
+        </layout>
+    </appender>
+
+    <appender name="ERROR_LOGGER" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${webapp.root}/logs2/error/error.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="'.'yyyy-MM-dd-HH'.log'"/>
+        <param name="encoding" value="utf-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[date:%d{yyyy-MM-dd HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="ERROR"/>
+            <param name="LevelMax" value="ERROR"/>
+        </filter>
+    </appender>
+
+    <appender name="INFO_LOGGER" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${webapp.root}/logs2/info/info.log"/>
+        <param name="Append" value="true"/>
+        <param name="DatePattern" value="yyyy-MM-dd-HH'.log'"/>
+        <param name="encoding" value="utf-8"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[date:%d{yyyy-MM-dd HH:mm:ss}] %m%n"/>
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="INFO"/>
+            <param name="LevelMax" value="WARN"/>
+        </filter>
+    </appender>
+
+    <root>
+        <priority value="INFO"/>
+        <!--<appender-ref ref="INFO_LOGGER"/>-->
+        <!--<appender-ref ref="BIZ_LOGGER"/>-->
+        <!--<appender-ref ref="ERROR_LOGGER"/>-->
+        <appender-ref ref="ConsoleAppender"/>
+    </root>
+</log4j:configuration>
