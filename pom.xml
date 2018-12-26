@@ -24,6 +24,7 @@
         <module>test-inner-jsp</module>
         <module>test-jsp</module>
         <module>springboot-log</module>
+        <module>springboot-starter</module>
     </modules>
 
     <dependencyManagement>
