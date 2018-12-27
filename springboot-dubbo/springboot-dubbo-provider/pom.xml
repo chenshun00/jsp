@@ -50,10 +50,11 @@
             <version>1.2</version>
         </dependency>
 
+        <!--dubbo starter 感觉一般-->
         <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>dubbo-spring-boot-starter</artifactId>
-            <version>0.2.0</version>
+            <version>${dubbo-starter-version}</version>
         </dependency>
 
         <dependency>

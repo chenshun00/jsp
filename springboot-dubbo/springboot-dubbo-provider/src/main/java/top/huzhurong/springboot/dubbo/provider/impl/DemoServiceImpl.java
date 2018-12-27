@@ -4,6 +4,8 @@ import com.alibaba.dubbo.config.annotation.Service;
 import top.huzhurong.springboot.dubbo.common.DemoService;
 
 /**
+ * 已经被注入了,不需要使用Spring的 {@link org.springframework.stereotype.Service} 进行注解了
+ *
  * @author chenshun00@gmail.com
  * @since 2018/12/27
  */
@@ -13,7 +15,6 @@ import top.huzhurong.springboot.dubbo.common.DemoService;
         protocol = "${dubbo.protocol.id}",
         registry = "${dubbo.registry.id}"
 )
-@org.springframework.stereotype.Service
 public class DemoServiceImpl implements DemoService {
 
     @Override
