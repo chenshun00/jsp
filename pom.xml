@@ -25,6 +25,7 @@
         <module>test-jsp</module>
         <module>springboot-log</module>
         <module>springboot-starter</module>
+        <module>springboot-dubbo</module>
     </modules>
 
     <dependencyManagement>
