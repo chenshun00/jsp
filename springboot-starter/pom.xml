@@ -15,6 +15,7 @@
         <module>springboot1</module>
         <module>springboot2</module>
         <module>my-starter</module>
+        <module>test-starter</module>
     </modules>
 
 
