@@ -30,10 +30,13 @@ public class ResourceConfigurer implements LifecycleListener {
             if (atomicBoolean.compareAndSet(false, true)) {
                 try {
                     //加载你的目录
-                    URL url = ResourceUtils.getURL("你的jsp路径");
+                    URL url = ResourceUtils.getURL("/Users/chenshun/tomcat/code/jsp");
                     context.getResources().createWebResourceSet(WebResourceRoot.ResourceSetType.RESOURCE_JAR, "/", url, "/");
                 } catch (FileNotFoundException e) {
                     System.err.println("====这个消息可以忽视:" + e.getMessage());
+                }catch (Throwable ex){
+                    System.err.println(ex.getMessage());
+                    //System.exit(1);
                 }
             }
         }

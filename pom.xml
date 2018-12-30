@@ -26,6 +26,7 @@
         <module>springboot-log</module>
         <module>springboot-starter</module>
         <module>springboot-dubbo</module>
+        <module>springboot-websocket</module>
     </modules>
 
     <dependencyManagement>
