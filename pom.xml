@@ -27,6 +27,7 @@
         <module>springboot-starter</module>
         <module>springboot-dubbo</module>
         <module>springboot-websocket</module>
+        <module>springboot-feature</module>
     </modules>
 
     <dependencyManagement>
