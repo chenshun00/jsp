@@ -104,6 +104,16 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>top.huzhurong.springboot.log4j2.Log4j2Application</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
