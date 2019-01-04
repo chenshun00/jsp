@@ -15,4 +15,6 @@
 
 > order 值越小，优先级越高(注意负数)
 
+> 可以使用 `jmap -histo:live | grep top.huzhurong.boot.feature` 来查看存活实例，当作练习 `jmap` 的使用了
+
 #####

@@ -4,12 +4,14 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.context.annotation.Bean;
 
 /**
  * @author chenshun00@gmail.com
  * @since 2019/1/1
  */
+@ServletComponentScan("top.huzhurong.boot.feature")
 @SpringBootApplication
 @Slf4j
 public class FeatureApplication {

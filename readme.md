@@ -30,3 +30,7 @@ jar包中的 `jsp` 和 `META-INF/resources` 目录下的 `jsp` 不支持实时�
 > 文档:[SpringBoot 文档](!https://docs.spring.io/spring-boot/docs/2.1.1.RELEASE/reference/html/)
 > 文档:[webSocket 文档](!https://docs.spring.io/spring-framework/docs/5.0.0.M1/spring-framework-reference/html/websocket.html)
 > 文档:[webSocket rfc6455](!https://tools.ietf.org/html/rfc6455)
+
+
+
+> 适用人群:java新人,SpringBoot初学者
