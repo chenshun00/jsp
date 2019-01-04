@@ -1,2 +1,6 @@
 org.springframework.boot.diagnostics.FailureAnalyzer=\
   top.huzhurong.boot.feature.failture.ProjectConstraintViolationFailureAnalyzer
+
+
+org.springframework.context.ApplicationListener=\
+  top.huzhurong.boot.feature.event.EventListener

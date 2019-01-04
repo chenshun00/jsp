@@ -12,7 +12,7 @@ import org.springframework.boot.diagnostics.FailureAnalyzer;
 public class ProjectConstraintViolationFailureAnalyzer implements FailureAnalyzer {
     @Override
     public FailureAnalysis analyze(Throwable failure) {
-        //发送钉钉消息
-        return new FailureAnalysis(failure.getMessage(), failure.getMessage(), failure);
+        log.error("springBoot 启动异常:" + failure.getMessage(), failure);
+        return new FailureAnalysis(failure.getMessage(), "springBoot 启动异常", failure);
     }
 }
