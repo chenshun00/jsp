@@ -28,6 +28,7 @@
         <module>springboot-dubbo</module>
         <module>springboot-websocket</module>
         <module>springboot-feature</module>
+        <module>springboot-template</module>
     </modules>
 
     <dependencyManagement>
