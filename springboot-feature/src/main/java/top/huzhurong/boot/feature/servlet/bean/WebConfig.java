@@ -45,4 +45,7 @@ public class WebConfig {
         return bean;
     }
 
+
+    //@Bean 的方式注册Servlet也是OK的
+
 }

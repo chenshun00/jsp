@@ -17,4 +17,10 @@
 
 > 可以使用 `jmap -histo:live | grep top.huzhurong.boot.feature` 来查看存活实例，当作练习 `jmap` 的使用了
 
+
+#### 限制
+
+> There are some restrictions when creating an ApplicationContext hierarchy.
+For example, Web components must be contained within the child context, and the same Environment is
+
 #####
