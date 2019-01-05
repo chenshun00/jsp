@@ -33,7 +33,7 @@ public class FeatureApplication {
                     //需关闭配置文件中的banner
                     System.out.println("====:: hhh ::====");
                 })
-                .run();
+                .run(args);
     }
 
     @Bean
